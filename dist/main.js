@@ -1,0 +1,2 @@
+(()=>{"use strict";fetch("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/islamabad/?key=KG6VNQ6N9DLV5J5HGB4E4WAKX",{mode:"cors"}).then(function(e){if(!e.ok)throw new Error("Sybau");return e.json()}).then(e=>e).catch(e=>{throw new Error(e)}).then(e=>console.log(e)).catch(e=>{console.log("Found an error",e)})})();
+//# sourceMappingURL=main.js.map
