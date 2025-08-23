@@ -48,6 +48,63 @@ h6 {
   isolation: isolate;
 }
 
+:root {
+  --lightGrey: oklch(92.9% 0.013 255.508);
+}
+
 .main {
   height: 100vh;
+  background-image: linear-gradient(
+    to right,
+    oklch(58.6% 0.253 17.585),
+    oklch(51.4% 0.222 16.935)
+  );
+  align-content: center;
+}
+
+.container {
+  margin: 0 auto;
+  width: 50%;
+  border-radius: 25px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.searchCityDiv {
+  display: flex;
+}
+
+.searchCityDiv input {
+  width: 100%;
+  height: 5vh;
+  outline: none;
+  border: 2px solid var(--lightGrey);
+  border-radius: 15px;
+  transition: border 0.1s ease;
+  padding: 0 10px;
+  font-size: 1rem;
+}
+
+.searchCityDiv input:focus {
+  border: 4px solid var(--lightGrey);
+}
+
+.searchCityDiv button {
+  margin-left: 10px;
+  width: calc(20px + 2vw);
+  border: 2px solid var(--lightGrey);
+  border-radius: 15px;
+  background-color: white;
+  transition: transform 0.2s ease;
+  font-size: 1.5rem;
+}
+
+.searchCityDiv button:hover {
+  cursor: pointer;
+}
+
+.searchCityDiv button:active {
+  transform: translate(5px, -5px);
 }
