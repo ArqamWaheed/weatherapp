@@ -1,6 +1,6 @@
 const API_key = "KG6VNQ6N9DLV5J5HGB4E4WAKX";
 
-async function getWeatherData(cityName) {
+export default async function getWeatherData(cityName) {
   try {
     let response = await fetch(
       `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${cityName}/?key=${API_key}`,
@@ -16,6 +16,3 @@ async function getWeatherData(cityName) {
     return null;
   }
 }
-
-let cityData = await getWeatherData("Islamabad");
-console.log(cityData);
