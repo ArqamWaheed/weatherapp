@@ -1,5 +1,7 @@
 import getWeatherData from "./weatherAPI.js";
 
+let currentCity = null;
+
 async function cityWeatherData(cityName) {
   const data = await getWeatherData(cityName);
   if (data) {
@@ -15,3 +17,5 @@ async function cityWeatherData(cityName) {
     return null;
   }
 }
+
+export { currentCity, cityWeatherData };

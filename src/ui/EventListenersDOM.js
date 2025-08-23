@@ -1,4 +1,3 @@
-import getWeatherData from "../core/weatherAPI.js";
 import { cityWeatherData } from "../core/weatherModel.js";
 import { validateCityTextInput } from "./Validation.js";
 import { $cityTextInput, $submitCityBtn } from "./cacheDOM.js";

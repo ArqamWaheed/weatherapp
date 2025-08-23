@@ -1,2 +1,2 @@
 import "./styles.css";
-import "./core/weatherModel.js";
+import "./ui/EventListenersDOM.js";
