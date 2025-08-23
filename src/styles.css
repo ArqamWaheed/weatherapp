@@ -13,8 +13,8 @@ body {
   line-height: 1.25;
   -webkit-font-smoothing: antialiased;
   font-family:
-    "Fredoka", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    Arial, sans-serif, "Fredoka", system-ui, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 img,
@@ -107,4 +107,38 @@ h6 {
 
 .searchCityDiv button:active {
   transform: translate(5px, -5px);
+}
+
+.todayPanelDiv {
+  display: flex;
+  margin-top: calc(5px + 1vh);
+}
+
+.todayPanelDiv div {
+  display: flex;
+  margin-left: calc(10px + 1vw);
+}
+
+.todayPanelDiv div p {
+  margin-top: 1vh;
+  font-size: 1.5rem;
+}
+
+.todayPanelDiv div h1 {
+  font-size: 5rem;
+  font-weight: 500;
+}
+
+.todayPanelDiv div div {
+  margin-left: calc(5px + 0.5vw);
+  display: flex;
+  flex-direction: column;
+  padding-top: 1vh;
+}
+
+.todayPanelDiv div div p {
+  font-size: 0.75rem;
+  margin: 3px 0;
+  font-weight: 400;
+  color: rgb(158, 158, 158);
 }
