@@ -16,6 +16,7 @@ const $descriptionText = $displayPanelBody.querySelector(
 );
 const $celciusBtn = $displayPanelBody.querySelector(".tempCelciusText");
 const $fahreinheitBtn = $displayPanelBody.querySelector(".tempFahrenheitText");
+const $loadingScreen = document.querySelector("#loadingScreen");
 
 export {
   $displayPanelBody,
@@ -30,4 +31,5 @@ export {
   $descriptionText,
   $celciusBtn,
   $fahreinheitBtn,
+  $loadingScreen,
 };

@@ -1,5 +1,5 @@
 import { cityWeatherData, currentCity } from "../core/weatherModel.js";
-import { renderCityData, renderTemperature } from "./Display.js";
+import { loadingScreen, renderCityData, renderTemperature } from "./Display.js";
 import { validateCityTextInput } from "./Validation.js";
 import {
   $celciusBtn,
@@ -12,12 +12,16 @@ import {
 $submitCityBtn.addEventListener("click", async function () {
   // call API >> Validate result >> render DOM
   if (validateCityTextInput()) {
+    loadingScreen.showLoadingScreen();
     $displayPanelBody.style.display = "none";
     const cityName = $cityTextInput.value;
     currentCity.cityObj = await cityWeatherData(cityName);
     if (currentCity.cityObj) {
       await renderCityData(currentCity.cityObj);
+      loadingScreen.hideLoadingScreen();
       $displayPanelBody.style.display = "block";
+    } else {
+      loadingScreen.hideLoadingScreen();
     }
   } else {
     alert("Enter a city name!");

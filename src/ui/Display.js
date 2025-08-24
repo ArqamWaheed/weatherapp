@@ -4,6 +4,7 @@ import {
   $descriptionText,
   $feelsLikeText,
   $humidityText,
+  $loadingScreen,
   $tempText,
   $windSpeedText,
 } from "./cacheDOM.js";
@@ -29,4 +30,15 @@ function renderTemperature(cityObj) {
   }
 }
 
-export { renderCityData, renderTemperature };
+const loadingScreen = {
+  showLoadingScreen() {
+    $loadingScreen.style.opacity = "0.9";
+    $loadingScreen.style.visibility = "visible";
+  },
+  hideLoadingScreen() {
+    $loadingScreen.style.opacity = "0";
+    $loadingScreen.style.visibility = "hidden";
+  },
+};
+
+export { renderCityData, renderTemperature, loadingScreen };
