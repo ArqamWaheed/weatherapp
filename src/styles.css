@@ -110,15 +110,20 @@ h6 {
 }
 
 .weatherContentDiv {
+  display: none;
   padding: 0 calc(10px + 1vw);
   overflow: hidden;
   white-space: none;
 }
 
+#City {
+  margin-top: calc(5px + 3vh);
+  margin-bottom: calc(5px + 1vh);
+}
+
 .todayPanelDiv {
   display: flex;
   justify-content: flex-start;
-  margin-top: calc(5px + 3vh);
 }
 
 .tempInfo {
@@ -172,6 +177,10 @@ h6 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.dayInfo h1 {
+  margin-bottom: calc(2px + 1vh);
 }
 
 .dayInfo p {
