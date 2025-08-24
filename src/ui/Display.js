@@ -7,7 +7,7 @@ import {
   $tempText,
   $windSpeedText,
 } from "./cacheDOM.js";
-
+import { parse, format } from "date-fns";
 import { convertTemperature } from "../core/weatherServices.js";
 
 async function renderCityData(cityObj) {
@@ -15,7 +15,7 @@ async function renderCityData(cityObj) {
   $cityText.textContent = cityObj.cityName;
   $humidityText.textContent = `Humidity: ${cityObj.humidity}%`;
   $windSpeedText.textContent = `Wind: ${cityObj.windSpeed} km/h`;
-  $dateDayText.textContent = `${cityObj.date} on ${cityObj.time}`;
+  $dateDayText.textContent = `${format(cityObj.date, "do cccc")}, ${format(parse(cityObj.time, "HH:mm:ss", new Date()), "h:mm aaa")}`;
   $descriptionText.textContent = cityObj.description;
 }
 

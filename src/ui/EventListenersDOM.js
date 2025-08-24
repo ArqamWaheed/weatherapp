@@ -28,6 +28,8 @@ $fahreinheitBtn.addEventListener("click", function () {
   if (currentCity.cityObj.currentState === "C") {
     currentCity.cityObj.currentState = "F";
     renderTemperature(currentCity.cityObj);
+    $celciusBtn.style.color = "rgb(158, 158, 158)";
+    $fahreinheitBtn.style.color = "black";
   }
 });
 
@@ -35,5 +37,7 @@ $celciusBtn.addEventListener("click", function () {
   if (currentCity.cityObj.currentState === "F") {
     currentCity.cityObj.currentState = "C";
     renderTemperature(currentCity.cityObj);
+    $celciusBtn.style.color = "black";
+    $fahreinheitBtn.style.color = "rgb(158, 158, 158)";
   }
 });
