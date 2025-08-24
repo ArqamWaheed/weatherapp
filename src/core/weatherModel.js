@@ -15,6 +15,7 @@ async function cityWeatherData(cityName) {
       windSpeed: data.currentConditions.windspeed,
       icon: data.currentConditions.icon,
       description: data.currentConditions.conditions,
+      currentState: "C",
     };
   } else {
     alert("There's an error, are you sure you entered a valid city name?");

@@ -14,6 +14,8 @@ const $dateDayText = $displayPanelBody.querySelector(".dayInfo p");
 const $descriptionText = $displayPanelBody.querySelector(
   ".dayInfo p:nth-child(3)",
 );
+const $celciusBtn = $displayPanelBody.querySelector(".tempCelciusText");
+const $fahreinheitBtn = $displayPanelBody.querySelector(".tempFahrenheitText");
 
 export {
   $displayPanelBody,
@@ -26,4 +28,6 @@ export {
   $windSpeedText,
   $dateDayText,
   $descriptionText,
+  $celciusBtn,
+  $fahreinheitBtn,
 };
