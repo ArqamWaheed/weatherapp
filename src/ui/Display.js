@@ -6,6 +6,7 @@ import {
   $humidityText,
   $loadingScreen,
   $tempText,
+  $todayPanelImg,
   $windSpeedText,
 } from "./cacheDOM.js";
 import { parse, format } from "date-fns";
@@ -13,6 +14,8 @@ import { convertTemperature } from "../core/weatherServices.js";
 
 async function renderCityData(cityObj) {
   renderTemperature(cityObj);
+  let imgsrc = await import(`../weather-icons/${cityObj.icon}.svg`);
+  $todayPanelImg.src = imgsrc.default;
   $cityText.textContent = cityObj.cityName;
   $humidityText.textContent = `Humidity: ${cityObj.humidity}%`;
   $windSpeedText.textContent = `Wind: ${cityObj.windSpeed} km/h`;

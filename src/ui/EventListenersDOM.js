@@ -9,8 +9,7 @@ import {
   $submitCityBtn,
 } from "./cacheDOM.js";
 
-$submitCityBtn.addEventListener("click", async function () {
-  // call API >> Validate result >> render DOM
+async function submitEventCallHandler() {
   if (validateCityTextInput()) {
     loadingScreen.showLoadingScreen();
     $displayPanelBody.style.display = "none";
@@ -25,6 +24,16 @@ $submitCityBtn.addEventListener("click", async function () {
     }
   } else {
     alert("Enter a city name!");
+  }
+}
+
+$submitCityBtn.addEventListener("click", function () {
+  submitEventCallHandler();
+});
+$cityTextInput.addEventListener("keypress", function (event) {
+  if (event.keyCode === 13 || event.key === "Enter") {
+    event.preventDefault();
+    submitEventCallHandler();
   }
 });
 
