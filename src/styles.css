@@ -69,7 +69,7 @@ h6 {
   background-color: white;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 30px;
 }
 
 .searchCityDiv {
@@ -109,36 +109,72 @@ h6 {
   transform: translate(5px, -5px);
 }
 
-.todayPanelDiv {
-  display: flex;
-  margin-top: calc(5px + 1vh);
+.weatherContentDiv {
+  padding: 0 calc(10px + 1vw);
+  overflow: hidden;
+  white-space: none;
 }
 
-.todayPanelDiv div {
+.todayPanelDiv {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: calc(5px + 3vh);
+}
+
+.tempInfo {
+  flex: 0 0 auto;
+  display: flex;
+}
+
+.tempDiv {
   display: flex;
   margin-left: calc(10px + 1vw);
 }
 
-.todayPanelDiv div p {
+.tempDiv p {
   margin-top: 1vh;
   font-size: 1.5rem;
+  text-wrap: nowrap;
 }
 
-.todayPanelDiv div h1 {
+.tempFahrenheitText {
+  color: rgb(158, 158, 158);
+}
+
+.tempFahrenheitText:hover,
+.tempCelciusText:hover {
+  cursor: pointer;
+}
+
+#temperature {
   font-size: 5rem;
   font-weight: 500;
 }
 
-.todayPanelDiv div div {
+.tempDiv div {
   margin-left: calc(5px + 0.5vw);
   display: flex;
   flex-direction: column;
   padding-top: 1vh;
 }
 
-.todayPanelDiv div div p {
+.tempDiv div p {
   font-size: 0.75rem;
   margin: 3px 0;
   font-weight: 400;
   color: rgb(158, 158, 158);
+}
+.dayInfo {
+  flex: 1 1 auto;
+  margin-left: auto;
+  min-width: 0;
+  max-width: fit-content;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dayInfo p {
+  color: rgb(158, 158, 158);
+  font-size: 1rem;
 }
